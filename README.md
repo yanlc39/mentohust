@@ -11,4 +11,4 @@
   - `make`
   - `cd src`
   - `cp mentohust /usr/local/bin/`
-  - `mentohust` 按指令开始
+  - `mentohust` 按提示开始

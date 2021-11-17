@@ -193,7 +193,7 @@ am__define_uniq_tagged_files = \
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.in \
 	$(srcdir)/config.h.in $(srcdir)/mentohust.spec.in ABOUT-NLS \
-	AUTHORS COPYING ChangeLog INSTALL NEWS README.md compile \
+	COPYING README.md compile \
 	config.guess config.rpath config.sub depcomp install-sh \
 	missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -283,7 +283,7 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} '/Users/yanlc/Documents/git/mentohust/missing' makeinfo
 MKDIR_P = ./install-sh -c -d
 MSGFMT = /opt/homebrew/bin/msgfmt
-MSGFMT_015 = /opt/homebrew/bin/msgfmt
+MSGFMT_015 = @MSGFMT_015@
 MSGMERGE = /opt/homebrew/bin/msgmerge
 OBJEXT = o
 PACKAGE = mentohust
@@ -338,7 +338,7 @@ libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
 localstatedir = ${prefix}/var
 mandir = ${datarootdir}/man
-mkdir_p = $(top_builddir)/./install-sh -c -d
+mkdir_p = $(MKDIR_P)
 oldincludedir = /usr/include
 pdfdir = ${docdir}
 prefix = /usr

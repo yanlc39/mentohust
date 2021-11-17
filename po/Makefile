@@ -35,13 +35,13 @@ INSTALL_DATA = ${INSTALL} -m 644
 # In automake <= 1.9.x, $(mkdir_p) is defined either as "mkdir -p --" or as
 # "$(mkinstalldirs)" or as "$(install_sh) -d". For these automake versions,
 # ${SHELL} /Users/yanlc/Documents/git/mentohust/install-sh does not start with $(SHELL), so we add it.
-# In automake >= 1.10, $(top_builddir)/./install-sh -c -d is derived from ${MKDIR_P}, which is defined
+# In automake >= 1.10, $(MKDIR_P) is derived from ${MKDIR_P}, which is defined
 # either as "/path/to/mkdir -p" or ".../install-sh -c -d". For these automake
 # versions, $(mkinstalldirs) and $(install_sh) are unused.
 mkinstalldirs = $(SHELL) ${SHELL} /Users/yanlc/Documents/git/mentohust/install-sh -d
 install_sh = $(SHELL) ${SHELL} /Users/yanlc/Documents/git/mentohust/install-sh
 MKDIR_P = .././install-sh -c -d
-mkdir_p = $(top_builddir)/./install-sh -c -d
+mkdir_p = $(MKDIR_P)
 
 GMSGFMT_ = /opt/homebrew/bin/msgfmt
 GMSGFMT_no = /opt/homebrew/bin/msgfmt
@@ -49,7 +49,7 @@ GMSGFMT_yes = /opt/homebrew/bin/msgfmt
 GMSGFMT = $(GMSGFMT_$(USE_MSGCTXT))
 MSGFMT_ = /opt/homebrew/bin/msgfmt
 MSGFMT_no = /opt/homebrew/bin/msgfmt
-MSGFMT_yes = /opt/homebrew/bin/msgfmt
+MSGFMT_yes = @MSGFMT_015@
 MSGFMT = $(MSGFMT_$(USE_MSGCTXT))
 XGETTEXT_ = /opt/homebrew/bin/xgettext
 XGETTEXT_no = /opt/homebrew/bin/xgettext

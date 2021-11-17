@@ -17,11 +17,11 @@
 /* Define to 1 if you have the `atexit' function. */
 #define HAVE_ATEXIT 1
 
-/* Define to 1 if you have the MacOS X function CFLocaleCopyCurrent in the
-   CoreFoundation framework. */
-#define HAVE_CFLOCALECOPYCURRENT 1
+/* Define to 1 if you have the Mac OS X function
+   CFLocaleCopyPreferredLanguages in the CoreFoundation framework. */
+#define HAVE_CFLOCALECOPYPREFERREDLANGUAGES 1
 
-/* Define to 1 if you have the MacOS X function CFPreferencesCopyAppValue in
+/* Define to 1 if you have the Mac OS X function CFPreferencesCopyAppValue in
    the CoreFoundation framework. */
 #define HAVE_CFPREFERENCESCOPYAPPVALUE 1
 
@@ -35,7 +35,7 @@
 /* Define if the GNU gettext() function is already present or preinstalled. */
 /* #undef HAVE_GETTEXT */
 
-/* Define if you have the iconv() function. */
+/* Define if you have the iconv() function and it works. */
 #define HAVE_ICONV 1
 
 /* Define to 1 if you have the <iconv.h> header file. */

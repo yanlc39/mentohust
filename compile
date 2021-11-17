@@ -1,7 +1,7 @@
 #! /bin/sh
 # Wrapper for compilers which do not understand '-c -o'.
 
-scriptversion=2018-03-07.03; # UTC
+scriptversion=2021-11-17.07; # UTC
 
 # Copyright (C) 1999-2021 Free Software Foundation, Inc.
 # Written by Tom Tromey <tromey@cygnus.com>.

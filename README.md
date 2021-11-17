@@ -12,3 +12,5 @@
   - `cd src`
   - `cp mentohust /usr/local/bin/`
   - `mentohust` 按提示开始
+
+- 已经支持M1系列的处理器

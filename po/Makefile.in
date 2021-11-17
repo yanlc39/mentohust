@@ -11,7 +11,7 @@
 # Origin: gettext-0.16
 
 PACKAGE = mentohust
-VERSION = 0.3.1
+VERSION = 1.0.0
 PACKAGE_BUGREPORT = http://code.google.com/p/mentohust/issues/list
 
 SHELL = /bin/sh

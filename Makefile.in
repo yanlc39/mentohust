@@ -90,11 +90,7 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
-	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/lib-ld.m4 \
-	$(top_srcdir)/m4/lib-link.m4 $(top_srcdir)/m4/lib-prefix.m4 \
-	$(top_srcdir)/m4/nls.m4 $(top_srcdir)/m4/po.m4 \
-	$(top_srcdir)/m4/progtest.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(top_srcdir)/configure \
@@ -193,7 +189,7 @@ am__define_uniq_tagged_files = \
 DIST_SUBDIRS = $(SUBDIRS)
 am__DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.in \
 	$(srcdir)/config.h.in $(srcdir)/mentohust.spec.in ABOUT-NLS \
-	COPYING README.md compile \
+	AUTHORS COPYING ChangeLog INSTALL NEWS README.md compile \
 	config.guess config.rpath config.sub depcomp install-sh \
 	missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -250,6 +246,7 @@ AWK = @AWK@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CFLAGS = @CFLAGS@
+CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CSCOPE = @CSCOPE@
 CTAGS = @CTAGS@
@@ -259,11 +256,14 @@ DEPDIR = @DEPDIR@
 ECHO_C = @ECHO_C@
 ECHO_N = @ECHO_N@
 ECHO_T = @ECHO_T@
+EGREP = @EGREP@
 ETAGS = @ETAGS@
 EXEEXT = @EXEEXT@
+GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@
 GETTEXT_PACKAGE = @GETTEXT_PACKAGE@
 GMSGFMT = @GMSGFMT@
 GMSGFMT_015 = @GMSGFMT_015@
+GREP = @GREP@
 INSTALL = @INSTALL@
 INSTALL_DATA = @INSTALL_DATA@
 INSTALL_PROGRAM = @INSTALL_PROGRAM@
@@ -283,8 +283,8 @@ LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MKDIR_P = @MKDIR_P@
 MSGFMT = @MSGFMT@
-MSGFMT_015 = @MSGFMT_015@
 MSGMERGE = @MSGMERGE@
+MSGMERGE_FOR_MSGFMT_OPTION = @MSGMERGE_FOR_MSGFMT_OPTION@
 OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
 PACKAGE_BUGREPORT = @PACKAGE_BUGREPORT@
@@ -295,6 +295,7 @@ PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
 POSUB = @POSUB@
+SED = @SED@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
@@ -302,6 +303,7 @@ USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 XGETTEXT = @XGETTEXT@
 XGETTEXT_015 = @XGETTEXT_015@
+XGETTEXT_EXTRA_OPTIONS = @XGETTEXT_EXTRA_OPTIONS@
 abs_builddir = @abs_builddir@
 abs_srcdir = @abs_srcdir@
 abs_top_builddir = @abs_top_builddir@
@@ -355,7 +357,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 ACLOCAL_AMFLAGS = -I m4
 SUBDIRS = src po
-dist_doc_DATA = README
+dist_doc_DATA = README.md
 dist_man_MANS = mentohust.1
 EXTRA_DIST = @PACKAGE_NAME@.spec.in m4 debian/changelog debian/compat debian/control debian/copyright debian/rules debian/watch
 all: config.h

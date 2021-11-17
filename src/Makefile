@@ -92,11 +92,7 @@ host_triplet = aarch64-apple-darwin21.0.1
 bin_PROGRAMS = mentohust$(EXEEXT)
 subdir = src
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/m4/gettext.m4 \
-	$(top_srcdir)/m4/iconv.m4 $(top_srcdir)/m4/lib-ld.m4 \
-	$(top_srcdir)/m4/lib-link.m4 $(top_srcdir)/m4/lib-prefix.m4 \
-	$(top_srcdir)/m4/nls.m4 $(top_srcdir)/m4/po.m4 \
-	$(top_srcdir)/m4/progtest.m4 $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 DIST_COMMON = $(srcdir)/Makefile.am $(dist_sysconf_DATA) \
@@ -209,6 +205,7 @@ AWK = awk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS =  -Os -Wall
+CPP = gcc -E
 CPPFLAGS = 
 CSCOPE = cscope
 CTAGS = ctags
@@ -218,11 +215,14 @@ DEPDIR = .deps
 ECHO_C = \c
 ECHO_N = 
 ECHO_T = 
+EGREP = /usr/bin/grep -E
 ETAGS = etags
 EXEEXT = 
+GETTEXT_MACRO_VERSION = 0.20
 GETTEXT_PACKAGE = mentohust
 GMSGFMT = /opt/homebrew/bin/msgfmt
 GMSGFMT_015 = /opt/homebrew/bin/msgfmt
+GREP = /usr/bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
@@ -242,25 +242,27 @@ LTLIBOBJS =
 MAKEINFO = ${SHELL} '/Users/yanlc/Documents/git/mentohust/missing' makeinfo
 MKDIR_P = .././install-sh -c -d
 MSGFMT = /opt/homebrew/bin/msgfmt
-MSGFMT_015 = @MSGFMT_015@
 MSGMERGE = /opt/homebrew/bin/msgmerge
+MSGMERGE_FOR_MSGFMT_OPTION = --for-msgfmt
 OBJEXT = o
 PACKAGE = mentohust
 PACKAGE_BUGREPORT = http://code.google.com/p/mentohust/issues/list
 PACKAGE_NAME = mentohust
-PACKAGE_STRING = mentohust 0.3.1
+PACKAGE_STRING = mentohust 1.0.0
 PACKAGE_TARNAME = mentohust
 PACKAGE_URL = 
-PACKAGE_VERSION = 0.3.1
+PACKAGE_VERSION = 1.0.0
 PATH_SEPARATOR = :
 POSUB = 
+SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = 
 USE_NLS = no
-VERSION = 0.3.1
+VERSION = 1.0.0
 XGETTEXT = /opt/homebrew/bin/xgettext
 XGETTEXT_015 = /opt/homebrew/bin/xgettext
+XGETTEXT_EXTRA_OPTIONS = 
 abs_builddir = /Users/yanlc/Documents/git/mentohust/src
 abs_srcdir = /Users/yanlc/Documents/git/mentohust/src
 abs_top_builddir = /Users/yanlc/Documents/git/mentohust
